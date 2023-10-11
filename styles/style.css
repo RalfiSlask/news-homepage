@@ -59,14 +59,18 @@ table {
 body {
   color: #5E607A;
   font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
 }
 
 .site_container {
-  width: 343px;
+  max-width: 343px;
+  margin-top: 25px;
+  margin-bottom: 80px;
 }
 
 header {
-  width: 100%;
+  max-width: 343px;
   height: 28px;
   display: flex;
   justify-content: space-between;
@@ -107,6 +111,27 @@ nav div:hover {
   color: #F15D51;
 }
 
+.future_section {
+  width: 100%;
+}
+.new_container {
+  background-color: #00001A;
+  padding: 24px 21px;
+  width: 343px;
+}
+.new_container div {
+  display: grid;
+}
+.new_container div article {
+  border-bottom: 1px solid rgba(94, 96, 122, 0.5);
+}
+.new_container div article p {
+  color: #C5C6CE;
+  font-size: 0.938rem;
+  font-weight: 400;
+  line-height: 1.538rem;
+}
+
 button {
   width: 185px;
   height: 48px;
@@ -116,6 +141,40 @@ button {
   font-size: 0.875rem;
   line-height: 1.5rem;
   letter-spacing: 0.273rem;
+  border: none;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #00001A;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  margin-top: 32px;
+  margin-bottom: 64px;
+}
+
+footer {
+  width: 100%;
+  height: 451px;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr;
+}
+footer article {
+  display: flex;
+  gap: 24px;
+}
+footer article img {
+  width: 100px;
+  height: 127px;
+}
+footer article div p {
+  font-size: 0.938rem;
+  font-weight: 400;
+  line-height: 1.625rem;
 }
 
 h1 {
@@ -163,10 +222,12 @@ h5:hover {
 
 @media screen and (min-width: 680px) {
   .site_container {
-    width: 1110px;
+    max-width: 1110px;
+    margin-top: 89px;
+    margin-bottom: 130px;
   }
   header {
-    width: 1110px;
+    max-width: 1110px;
     height: 40px;
   }
   .w_logo {
@@ -191,5 +252,46 @@ h5:hover {
     grid-template-columns: repeat(5, 1fr);
     grid-auto-flow: column;
     gap: 40px;
+  }
+  .future_section {
+    width: 730px;
+  }
+  .new_container {
+    padding: 32px 24px;
+    width: 350px;
+  }
+  .new_container div {
+    display: grid;
+  }
+  .new_container div article p {
+    color: #C5C6CE;
+  }
+  main {
+    margin-top: 55px;
+    margin-bottom: 73px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+  footer {
+    width: 100%;
+    height: 127px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  footer article {
+    display: flex;
+    gap: 24px;
+  }
+  footer article img {
+    width: 100px;
+    height: 127px;
+  }
+  footer article div p {
+    font-size: 0.938rem;
+    font-weight: 400;
+    line-height: 1.625rem;
   }
 }/*# sourceMappingURL=style.css.map */
