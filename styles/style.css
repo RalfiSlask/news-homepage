@@ -67,6 +67,7 @@ body {
   max-width: 343px;
   margin-top: 25px;
   margin-bottom: 80px;
+  overflow: hidden;
 }
 
 header {
@@ -84,6 +85,7 @@ header {
 
 .hamburger {
   display: block;
+  cursor: pointer;
 }
 
 .puzzle_image_container {
@@ -97,23 +99,81 @@ header {
      object-fit: cover;
 }
 
-nav {
+.header_nav {
   display: none;
 }
 
-nav div {
+.header_nav div {
   font-size: 0.938rem;
   font-weight: 400;
   line-height: 1.625rem;
 }
-nav div:hover {
+.header_nav div:hover {
   cursor: pointer;
   color: #F15D51;
+}
+
+.lightbox {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 20;
 }
 
 .future_section {
   width: 100%;
 }
+
+.sidebar {
+  width: 256px;
+  height: 100%;
+  z-index: 50;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+  background-color: white;
+  padding: 24px;
+  display: grid;
+  left: calc(50% + 171.5px);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-auto-flow: column;
+}
+.sidebar img {
+  grid-column-start: 4;
+  grid-row: 1;
+  align-items: center;
+  text-align: center;
+}
+.sidebar .sidebar_nav {
+  color: #00001A;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  display: grid;
+  gap: 24px;
+  grid-row: 3;
+}
+.sidebar .sidebar_nav div:hover {
+  cursor: pointer;
+  color: #F15D51;
+}
+
+.close {
+  cursor: pointer;
+}
+
+.sidebar_open {
+  transform: translateX(0);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
 .new_container {
   background-color: #00001A;
   padding: 24px 21px;
@@ -247,7 +307,7 @@ h5:hover {
   .hamburger {
     display: none;
   }
-  nav {
+  .header_nav {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-auto-flow: column;

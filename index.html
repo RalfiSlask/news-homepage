@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <title>News homepage</title>
   <link rel="stylesheet" href="./styles/style.css">
@@ -11,11 +11,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <div class="lightbox hidden"></div>
   <div class="site_container">
+    <div class="sidebar">
+      <img class="close" src="./assets/images/icon-menu-close.svg" width="30" height="30" alt="a logo that looks like an X for closing the sidebar">
+      <nav class="sidebar_nav">
+        <div>Home</div>
+        <div>New</div>
+        <div>Popular</div>
+        <div>Trending</div>
+        <div>Categories</div>
+      </nav>
+    </div>
     <header>
-      <img class="w_logo" src="./assets/images/logo.svg" alt="a black logo of the letter w with a punctuation after">
+      <img class="w_logo" src="./assets/images/logo.svg" width="100%" height="100%" alt="a black logo of the letter w with a punctuation after">
       <img class="hamburger" src="./assets/images/icon-menu.svg" alt="hamburger menu to open sidebar">
-      <nav>
+      <nav class="header_nav">
         <div>Home</div>
         <div>New</div>
         <div>Popular</div>
@@ -42,7 +54,7 @@
           </div>
         </article>
       </section>
-
+      
       <section class="new_container">
         <h2>New</h2>
         <div>
@@ -64,7 +76,7 @@
     </main>
     <footer>
       <article>
-        <img src="./assets/images/image-retro-pcs.jpg" alt="old computers in a neon lighting, like an 80s theme">
+        <img src="./assets/images/image-retro-pcs.jpg" width="100" height="127" alt="old computers in a neon lighting, like an 80s theme">
         <div>
           <h3>01</h3>
           <h5>Reviving Retro PCs</h5>
@@ -72,7 +84,7 @@
         </div>
       </article>
       <article>
-        <img src="./assets/images/image-top-laptops.jpg" alt="black keyboard keys with the letters in a red color">
+        <img src="./assets/images/image-top-laptops.jpg" width="100" height="127"  alt="black keyboard keys with the letters in a red color">
         <div>
           <h3>02</h3>
           <h5>Reviving Retro PCs</h5>
@@ -80,7 +92,7 @@
         </div>
       </article>
       <article>
-        <img src="./assets/images/image-gaming-growth.jpg" alt="a playstation 4 controler that is launched in the air above a hand">
+        <img src="./assets/images/image-gaming-growth.jpg" width="100" height="127" alt="a playstation 4 controler that is launched in the air above a hand">
         <div>
           <h3>01</h3>
           <h5>Reviving Retro PCs</h5>
@@ -89,5 +101,6 @@
       </article>
     </footer>
   </div>  
+  <script src="index.js" defer></script>
 </body>
 </html>
