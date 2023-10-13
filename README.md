@@ -1,4 +1,4 @@
-![News-Homepage](./preview.PNG)
+![News-Homepage](./preview.png)
 
 
 Built with
